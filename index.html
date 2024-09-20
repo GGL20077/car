@@ -5,107 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fears to Depth - Un juego de terror por GG Studios. Consíguelo gratis en Itch.io.">
     <title>Fears to Depth - GG Studios</title>
-    <style>
-        body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    zstyle>
+    * {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #111;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #f00;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.1em;
 }
 
 header {
-    padding: 50px;
-    background-color: #1c1c1c;
+    position: relative;
+    height: 100vh;
+    background: url('https://source.unsplash.com/featured/?dark,horror') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
     font-size: 4em;
-    color: #ff0000;
-    margin: 0;
+    color: #fff;
+    z-index: 2;
 }
 
 header p {
-    font-size: 1.2em;
-    color: #ffffff;
-    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ccc;
+    z-index: 2;
 }
 
-section {
-    padding: 50px;
-    margin: 0;
+.content {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-h2 {
+.content h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
     color: #ff0000;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-a.button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin-top: 20px;
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.button {
     background-color: #ff0000;
-    color: #ffffff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
     text-decoration: none;
     font-size: 1.2em;
-    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-a.button:hover {
+.button:hover {
     background-color: #d00000;
 }
 
 footer {
+    background-color: #111;
     padding: 20px;
-    background-color: #1c1c1c;
+    text-align: center;
 }
 
 footer p {
-    margin: 0;
-    color: #ffffff;
     font-size: 1em;
+    color: #fff;
 }
-
-    </style>
+</style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="logo">GG Studios</div>
+        <ul>
+            <li><a href="#story">Historia</a></li>
+            <li><a href="#download">Descargar</a></li>
+            <li><a href="#donate">Donaciones</a></li>
+        </ul>
+    </nav>
+
     <header>
+        <div class="overlay"></div>
         <h1>Fears to Depth</h1>
-        <p>Un nuevo juego de terror por GG Studios</p>
+        <p>El horror acecha en las sombras. ¿Sobrevivirás?</p>
     </header>
 
-    <section id="story">
-        <h2>La historia</h2>
-        <p>Imagina quedarte solo en un suburbio, atrapado entre el peligro y lo desconocido. 
-           En <strong>Fears to Depth</strong>, te enfrentarás a tus peores pesadillas. Prepárate para tomar decisiones críticas 
-           que determinarán tu destino. ¿Sobrevivirás a la noche? Con dos finales posibles, tus decisiones importan.</p>
+    <section id="story" class="content">
+        <h2>La Historia</h2>
+        <p>En un suburbio tranquilo, la calma desaparece al anochecer. 
+           En <strong>Fears to Depth</strong>, te enfrentarás a algo más que tus propios miedos. 
+           Las decisiones que tomes determinarán si ves el amanecer.</p>
+        <div class="image-grid">
+            <img src="https://source.unsplash.com/featured/?dark,house" alt="Casa oscura">
+            <img src="https://source.unsplash.com/featured/?scary,suburb" alt="Suburbio aterrador">
+        </div>
     </section>
 
-    <section id="download">
-        <h2>Consíguelo gratis</h2>
-        <p>Disponible ahora en <a href="https://itch.io" target="_blank">Itch.io</a> completamente gratis. 
-           Sumérgete en una experiencia aterradora que te hará dudar de la realidad.</p>
-        <a href="https://itch.io" class="button" target="_blank">Descargar ahora</a>
+    <section id="download" class="content">
+        <h2>Consíguelo Gratis</h2>
+        <p>Sumérgete en una experiencia de horror única. <br>
+           Disponible gratuitamente en <a href="https://itch.io" target="_blank">Itch.io</a>.</p>
+        <a href="https://itch.io" class="button" target="_blank">Descargar Ahora</a>
     </section>
 
-    <section id="donate">
-        <h2>Apoya el proyecto</h2>
-        <p>Este juego está disponible gratis, pero si te ha gustado, considera apoyarnos con una donación. 
-           Cualquier contribución ayuda a mejorar el juego y a desarrollar más proyectos.</p>
+    <section id="donate" class="content">
+        <h2>Apoya el Proyecto</h2>
+        <p>Si disfrutaste del juego, considera hacer una donación para ayudar a GG Studios a seguir creando. ¡Toda ayuda es bienvenida!</p>
         <a href="https://paypal.me/TuLinkDePaypal" class="button">Donar vía PayPal</a>
     </section>
 
     <footer>
-        <p>Desarrollado por GG Studios</p>
+        <p>&copy; 2024 GG Studios - Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
