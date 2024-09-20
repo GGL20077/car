@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Cars2</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/car.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Cars2</div>
-      </div>
-    </div>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fears to Depth - Un juego de terror por GG Studios. Consíguelo gratis en Itch.io.">
+    <title>Fears to Depth - GG Studios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fears to Depth</h1>
+        <p>Un nuevo juego de terror por GG Studios</p>
+    </header>
+
+    <section id="story">
+        <h2>La historia</h2>
+        <p>Imagina quedarte solo en un suburbio, atrapado entre el peligro y lo desconocido. 
+           En <strong>Fears to Depth</strong>, te enfrentarás a tus peores pesadillas. Prepárate para tomar decisiones críticas 
+           que determinarán tu destino. ¿Sobrevivirás a la noche? Con dos finales posibles, tus decisiones importan.</p>
+    </section>
+
+    <section id="download">
+        <h2>Consíguelo gratis</h2>
+        <p>Disponible ahora en <a href="https://itch.io" target="_blank">Itch.io</a> completamente gratis. 
+           Sumérgete en una experiencia aterradora que te hará dudar de la realidad.</p>
+        <a href="https://itch.io" class="button" target="_blank">Descargar ahora</a>
+    </section>
+
+    <section id="donate">
+        <h2>Apoya el proyecto</h2>
+        <p>Este juego está disponible gratis, pero si te ha gustado, considera apoyarnos con una donación. 
+           Cualquier contribución ayuda a mejorar el juego y a desarrollar más proyectos.</p>
+        <a href="https://paypal.me/TuLinkDePaypal" class="button">Donar vía PayPal</a>
+    </section>
+
+    <footer>
+        <p>Desarrollado por GG Studios</p>
+    </footer>
+</body>
 </html>
